@@ -96,7 +96,7 @@ Sortie  : SETOSA
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/VOTRE_USERNAME/CodeAlpha_IrisClassification.git
+git clone https://github.com/moussaguindo0909-boop/CodeAlpha_IrisClassification.git
 cd CodeAlpha_IrisClassification
 
 # Installer les dépendances
