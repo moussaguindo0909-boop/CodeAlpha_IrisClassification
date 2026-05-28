@@ -17,6 +17,7 @@ Ce projet entraîne et compare plusieurs modèles de machine learning pour class
 
 ```
 CodeAlpha_IrisClassification/
+├── .venv
 │
 ├── iris_classification.py      # Script principal
 ├── iris_best_model.pkl         # Meilleur modèle sauvegardé
