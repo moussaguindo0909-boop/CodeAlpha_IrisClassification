@@ -33,11 +33,31 @@ CodeAlpha_IrisClassification/
 
 | Outil | Usage |
 |---|---|
-| Python 3.x | Langage principal |
+| Python 3.13.9 | Langage principal |
 | Pandas / NumPy | Manipulation des données |
 | Scikit-learn | Modèles, prétraitement, évaluation |
 | Matplotlib / Seaborn | Visualisation |
 | Joblib | Sauvegarde du modèle |
+
+---
+
+## Dataset
+
+| Propriété | Valeur |
+|---|---|
+| Nombre d'échantillons | 150 (50 par espèce) |
+| Nombre de features | 4 |
+| Valeurs manquantes | Aucune |
+| Découpage | 120 entrainement / 30 test |
+
+**Statistiques descriptives :**
+
+| Feature | Moyenne | Ecart-type | Min | Max |
+|---|---|---|---|---|
+| Sepal length (cm) | 5.84 | 0.83 | 4.30 | 7.90 |
+| Sepal width (cm) | 3.06 | 0.44 | 2.00 | 4.40 |
+| Petal length (cm) | 3.76 | 1.77 | 1.00 | 6.90 |
+| Petal width (cm) | 1.20 | 0.76 | 0.10 | 2.50 |
 
 ---
 
@@ -53,13 +73,21 @@ CodeAlpha_IrisClassification/
 
 ## Résultats
 
-| Modèle | Accuracy |
-|---|---|
-| KNN (k=5) | 96.67% |
-| Random Forest | 100.00% |
-| SVM (RBF) | 100.00% |
+| Modèle | Accuracy | Precision | Recall | F1-score |
+|---|---|---|---|---|
+| KNN (k=5) | 93.33% | 0.94 | 0.93 | 0.93 |
+| Random Forest | 90.00% | 0.90 | 0.90 | 0.90 |
+| SVM (RBF) | **96.67%** | **0.97** | **0.97** | **0.97** |
 
-Le meilleur modèle est sélectionné et sauvegardé automatiquement sous `iris_best_model.pkl`.
+Le meilleur modèle est le **SVM (RBF)** avec une accuracy de **96.67%** sur les données de test.
+Il est sauvegardé automatiquement sous `iris_best_model.pkl`.
+
+**Exemple de prédiction :**
+
+```
+Entrée  : sepal_length=5.1, sepal_width=3.5, petal_length=1.4, petal_width=0.2
+Sortie  : SETOSA
+```
 
 ---
 
